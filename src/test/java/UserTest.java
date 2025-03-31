@@ -1,13 +1,23 @@
+
 import org.junit.jupiter.api.Test;
 
-//V10 uppgift CI
+import static org.junit.jupiter.api.Assertions.*;
 
 public class UserTest {
+    @Test
+    public void addUserTest(){
+        User user = new User("Kalle","abc123");
+    }
 
     @Test
-    public void addUser(){
+    public void getNameTest(){
+        User user = new User("Kalle","abc123");
+        assertEquals("Kalle",user.getUser());
+    }
 
-        User user = new User ("Kalle","abc123");
-
+    @Test
+    public void getPasswordTest(){
+        User user = new User("Kalle","abc123");
+        assertEquals("abc123",user.getPassword());
     }
 }
