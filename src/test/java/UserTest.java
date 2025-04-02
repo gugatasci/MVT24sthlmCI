@@ -22,12 +22,11 @@ public class UserTest {
         User user = new User("Kalle","abc123");
         assertEquals("abc123",user.getPassword());
     }
+
     @Test
-    public void changeUserTest(){
-
-        User user = new User("Mehmet","abc123");
-        this.user = user;
-        assertEquals("Mehmet",user.getUser());
-
+    void testSetUserName() {
+        User user = new User("testUser", "securePass");
+        user.setUser("newUserName");
+        assertEquals("newUserName", user.getUser());
     }
 }
